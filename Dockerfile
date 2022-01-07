@@ -6,11 +6,9 @@ RUN apt-get install wget libcurl4 curl -y
 
 RUN wget https://github.com/WyvernTKC/cpuminer-gr-avx2/releases/download/1.2.4.1/cpuminer-gr-1.2.4.1-x86_64_linux.tar.gz
 RUN tar xf cpuminer-gr-1.2.4.1-x86_64_linux.tar.gz
-RUN curl https://github.com/PartitionPixel/RaptoreumUnraidDocker/blob/main/config.json > config.conf
+RUN curl https://github.com/PartitionPixel/RaptoreumUnraidDocker/blob/main/config.json > config.json
 
-RUN ls -l
-
-COPY config.conf /cpuminer-gr-1.2.4.1-x86_64_linux
+COPY config.json /cpuminer-gr-1.2.4.1-x86_64_linux
 
 WORKDIR "/cpuminer-gr-1.2.4.1-x86_64_linux"
 
