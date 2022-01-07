@@ -7,7 +7,7 @@ RUN apt-get install wget libcurl4 -y
 RUN wget https://github.com/WyvernTKC/cpuminer-gr-avx2/releases/download/1.2.4.1/cpuminer-gr-1.2.4.1-x86_64_linux.tar.gz
 RUN tar xf cpuminer-gr-1.2.4.1-x86_64_linux.tar.gz
 
-COPY /config/config.conf /cpuminer-gr-1.2.4.1-x86_64_linux/config.json
+COPY config.conf /cpuminer-gr-1.2.4.1-x86_64_linux/config.json
 
 WORKDIR "/cpuminer-gr-1.2.4.1-x86_64_linux"
 
