@@ -10,6 +10,10 @@ RUN curl https://github.com/PartitionPixel/RaptoreumUnraidDocker/blob/main/confi
 
 COPY config.json /cpuminer-gr-1.2.4.1-x86_64_linux
 
+RUN curl https://github.com/PartitionPixel/RaptoreumUnraidDocker/blob/main/tune_config > tune_config
+
+COPY tune_config /cpuminer-gr-1.2.4.1-x86_64_linux
+
 WORKDIR "/cpuminer-gr-1.2.4.1-x86_64_linux"
 
 ENTRYPOINT ["./cpuminer.sh"]
